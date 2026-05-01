@@ -279,6 +279,17 @@
     }
     .ai-item strong { color: #6d28d9; display: block; }
 
+    /* Education */
+    .edu-block { font-size: 9.5pt; color: #374151; }
+    .edu-degree { font-weight: 700; }
+    .edu-meta { color: var(--muted); font-size: 9pt; margin-top: 2px; }
+
+    /* AI section heading override */
+    .ai-heading { color: #7c3aed !important; border-color: #ede9fe !important; }
+
+    /* Experience section top spacing */
+    .experience-section { margin-top: 24px; }
+
     /* ── Print styles ── */
     @media print {
       @page {
@@ -318,13 +329,13 @@
     <!-- HEADER -->
     <header>
       <h1>Ronald Dominique Pabalan</h1>
-      <div class="title">Project Manager &nbsp;|&nbsp; AI-Assisted Developer</div>
+      <div class="title">Project Manager &nbsp;|&nbsp; AI-Assisted Developer &nbsp;|&nbsp; Freelancer</div>
       <div class="contact-row">
         <span data-icon="✉">rdominique.pabalan@gmail.com</span>
         <span data-icon="🌏">Philippines</span>
-        <span data-icon="🔗"><a href="https://www.linkedin.com/in/ronald-dominique-pabalan-5aa04a132/" target="_blank">linkedin.com/in/ronald-dominique-pabalan</a></span>
-        <span data-icon="⌥"><a href="https://github.com/domzxc" target="_blank">github.com/domzxc</a></span>
-        <span data-icon="🌐"><a href="https://domzxc.github.io/domportfolio/" target="_blank">domzxc.github.io/domportfolio</a></span>
+        <span data-icon="🔗"><a href="https://www.linkedin.com/in/ronald-dominique-pabalan-5aa04a132/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ronald-dominique-pabalan</a></span>
+        <span data-icon="⌥"><a href="https://github.com/domzxc" target="_blank" rel="noopener noreferrer">github.com/domzxc</a></span>
+        <span data-icon="🌐"><a href="https://domzxc.github.io/domportfolio/" target="_blank" rel="noopener noreferrer">domzxc.github.io/domportfolio</a></span>
       </div>
     </header>
 
@@ -348,7 +359,7 @@
         </div>
 
         <!-- EXPERIENCE -->
-        <section style="margin-top:24px;">
+        <section class="experience-section">
           <h2>Work Experience</h2>
 
           <div class="job">
@@ -512,7 +523,7 @@
 
         <!-- AI WORKFLOW -->
         <section class="ai-section">
-          <h2 style="color:#7c3aed;border-color:#ede9fe;">AI-Assisted Development</h2>
+          <h2 class="ai-heading">AI-Assisted Development</h2>
           <div class="ai-item">
             <strong>GitHub Copilot</strong>
             In-editor AI for code generation, API scaffolding, and component building
@@ -530,9 +541,9 @@
         <!-- EDUCATION (placeholder — update if needed) -->
         <section>
           <h2>Education</h2>
-          <div style="font-size:9.5pt;color:#374151;">
-            <div style="font-weight:700;">Bachelor of Science in Industrial Engineering</div>
-            <div style="color:var(--muted);font-size:9pt;margin-top:2px;">College Graduate &nbsp;·&nbsp; Philippines</div>
+          <div class="edu-block">
+            <div class="edu-degree">Bachelor of Science in Industrial Engineering</div>
+            <div class="edu-meta">College Graduate &nbsp;·&nbsp; Philippines</div>
           </div>
         </section>
 
