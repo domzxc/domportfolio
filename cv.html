@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ronald Dominique Pabalan — CV</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+xe5JLo+1cVSQUGIhqnEGcWlXCCYwE2muNJNB5A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -328,10 +329,24 @@
   <div class="print-bar">
     <span>📄 Ronald Dominique Pabalan — Curriculum Vitae</span>
     <div class="print-bar-buttons">
-      <button onclick="window.print()">⬇ Save as PDF</button>
+      <button onclick="saveAsPDF()">⬇ Save as PDF</button>
       <button class="btn-print" onclick="window.print()">🖨 Print</button>
     </div>
   </div>
+
+  <script>
+    function saveAsPDF() {
+      const element = document.querySelector('.page');
+      const opt = {
+        margin: 0,
+        filename: 'Ronald_Dominique_Pabalan_CV.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().set(opt).from(element).save();
+    }
+  </script>
 
   <div class="page">
 
