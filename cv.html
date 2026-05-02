@@ -38,6 +38,7 @@
       z-index: 999;
       box-shadow: 0 2px 8px rgba(0,0,0,.15);
     }
+    .print-bar-buttons { display: flex; gap: 8px; }
     .print-bar button {
       background: #fff;
       color: var(--blue);
@@ -48,7 +49,12 @@
       font-size: 13px;
       cursor: pointer;
     }
-    .print-bar button:hover { background: #dbeafe; }
+    .print-bar button.btn-print {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+    .print-bar button:hover { background: #dbeafe; color: var(--blue); }
 
     /* ── Page wrapper ── */
     .page {
@@ -321,7 +327,10 @@
 
   <div class="print-bar">
     <span>📄 Ronald Dominique Pabalan — Curriculum Vitae</span>
-    <button onclick="window.print()">⬇ Save as PDF / Print</button>
+    <div class="print-bar-buttons">
+      <button onclick="window.print()">⬇ Save as PDF</button>
+      <button class="btn-print" onclick="window.print()">🖨 Print</button>
+    </div>
   </div>
 
   <div class="page">
